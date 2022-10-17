@@ -1,4 +1,3 @@
-```
 # 生成vendor证书
 openssl genrsa -des3 -out vendor.pem 2048
 openssl req -new -key vendor.pem -out vendor.csr
@@ -31,4 +30,3 @@ curl --cert MDMPush.pem --http2 -v "https://api.push.apple.com/3/device/${TOKEN}
 # token
 base64 -D|hexdump -e '16/1 "%02X"'
 
-```
